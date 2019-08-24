@@ -99,5 +99,5 @@ Now that we have our server running, let's build a simple React Native app that 
 - Show us your app on your phone or an emulator if you chose to go down the native route rather than Expo! Use the playground to show that your app is actually modifying data in the server.
 
 ## Finally
-1. Push your branch and make a pull request with a succinct description of your project. (TODO: should we comment on their PR's?)
+1. Push your branch and make a pull request with a succinct description of your project. (TODO: should we comment on their PR's?) (TODO: potentially switch to Github classroom)
 2. We will have you guys demo your projects at our next meeting! Have fun :)
