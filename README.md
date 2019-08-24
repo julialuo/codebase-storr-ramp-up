@@ -2,13 +2,16 @@
 This is meant to be a fairly open-ended project to get you more familiar with the technologies used in our client project this semester with Storr. Reach out to us if you have any questions or concerns :)
 
 ## Setup
-- Clone this repo and make a new branch with your name
-- Make two new directories under the root, `server` and `client`. We recommend splitting up the two because you will be installing different node modules and using different boilerplates.
-- Install Node if you don't have it:
+1. Clone this repo and make a new branch with your name
+
+2. Make two new directories under the root, `server` and `client`. We recommend splitting up the two because you will be installing different node modules and using different boilerplates.
+
+3. Install Node if you don't have it:
   - MacOS: `brew update` then `brew install node`
   - Windows: Follow [this guide](https://blog.teamtreehouse.com/install-node-js-npm-windows)
   - Linux: Download and install binary from the [Node website](https://nodejs.org/en/download/)
-- Test your Node installation: Make sure the commands `node -v` and `npm -v` can run
+  
+4. Test your Node installation: Make sure the commands `node -v` and `npm -v` can run
 
 ## Server
 First, let's create an Apollo Express server using GraphQL.
@@ -20,17 +23,32 @@ First, let's create an Apollo Express server using GraphQL.
 - [The Apollo docs](https://www.apollographql.com/docs/apollo-server/) explains what Apollo Server is. Feel free to read through to get a general idea of the Apollo Server, although we would not recommend following the code since it is all in Javascript (not Typescript). `Essentials/Understanding schema concepts` talks more about GraphQL schemas.
 
 ### Code:
-- Make sure you are in the `server` directory
-- Follow [this Medium tutorial](https://medium.com/@th.guibert/basic-apollo-express-graphql-api-with-typescript-2ee021dea2c) to get a basic Hello World GraphQL Apollo server running
-- This part is open-ended. Extend your GraphQL schema beyond the basic Hello World and create custom resolvers for your new queries and mutations to satisfy the criteria below. Feel free to use static data to back up your server, or use a database if you're feeling fancy.
-- A great resource to auto-generate Typescript types based on a GraphQL schema is [graphql-codegen](https://graphql-code-generator.com/docs/getting-started/). Follow the steps `Installation` and then `Setup` to use it.
-- Make sure that your code satisfies the following criteria:
+1. Make sure you are in the `server` directory
+
+2. Follow [this Medium tutorial](https://medium.com/@th.guibert/basic-apollo-express-graphql-api-with-typescript-2ee021dea2c) to get a basic Hello World GraphQL Apollo server running
+
+3. This part is open-ended. Extend your GraphQL schema beyond the basic Hello World and create custom resolvers for your new queries and mutations to satisfy the criteria below. Feel free to use static data to back up your server, or use a database if you're feeling fancy.
+
+4. A great resource to auto-generate Typescript types based on a GraphQL schema is [graphql-codegen](https://graphql-code-generator.com/docs/getting-started/). Follow the steps `Installation` and then `Setup` to use it.
+
+5. Make sure that your code satisfies the following criteria:
   - Use `async` for your resolvers even if they are synchronous
   - Use `graphql-codegen`
   - Make sure your GraphQL schema:
     - Has at least 2 queries and at least 2 mutations (along with their resolvers)
     - Has at least 1 query and at least 1 mutation with argument(s)
-    - Uses types with the `!` suffix&mdash;What does this mean?
+    - Uses types both with and without the `!` suffix&mdash;What does this mean? E.g.
+    ```
+    type Person {
+      name: String!
+    }
+    ```
+    vs
+    ```
+    type Person {
+      name: String
+    }
+    ```
     - Has at least 1 nested type, e.g.:
     ```
     type Car { ... }
