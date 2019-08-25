@@ -7,6 +7,8 @@ Before we dive into the project, we want to talk about code health. Since your c
 - Organize your code into directories based on function and use imports/exports to access code in different directories. We're not going to enforce a certain structure, but you could Google resources like [this React Native guide](https://medium.com/the-andela-way/how-to-structure-a-react-native-app-for-scale-a29194cd33fc) structuring guide to figure out how to structure your code.
 - Make your code modular and avoid repetition. Each function should be relatively short and serve one main purpose, and there should be minimal repeated code between any of your functions. 
 
+* Tip: If you use VSCode, install the plugin `Prettier` and enable the option to `Lint on Save`.
+
 ## Goal
 By the end of this project, you will create a Apollo Express server to interact with GraphQL and a React Native frontend!
 
