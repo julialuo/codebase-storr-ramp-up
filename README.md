@@ -1,8 +1,17 @@
 # Ramp-up Project
 This is meant to be a fairly open-ended project to get you more familiar with the technologies used in our client project this semester with Storr. Reach out to us if you have any questions or concerns :)
 
+## Code Health
+Before we dive into the project, we want to talk about code health. Since your code for the semester will eventually be pushed into the actual Storr codebase, it needs to be maintainable and clean. Here are a few things to keep in mind:
+- Maintain a *consistent coding style*. Storr uses [this style guide](https://github.com/airbnb/javascript) (includes a part for React as well), so make sure to follow it as you code. We also recommend configuring your editor to indent with two spaces, to have a ruler for tracking line height, and to have linting for Typescript. 
+- Organize your code into directories based on function and use imports/exports to access code in different directories. We're not going to enforce a certain structure, but you could Google resources like [this React Native guide](https://medium.com/the-andela-way/how-to-structure-a-react-native-app-for-scale-a29194cd33fc) structuring guide to figure out how to structure your code.
+- Make your code modular and avoid repetition. Each function should be relatively short and serve one main purpose, and there should be minimal repeated code between any of your functions. 
+
+## Goal
+By the end of this project, you will create a Apollo Express server to interact with GraphQL and a React Native frontend!
+
 ## Setup
-1. Clone this repo and make a new branch with your name.
+1. Clone this repo and cd into it.
 
 2. Make two new directories under the root, `server` and `client`. We recommend splitting up the two because you will be installing different node modules and using different boilerplates.
 
@@ -12,12 +21,6 @@ This is meant to be a fairly open-ended project to get you more familiar with th
   - Linux: Download and install binary from the [Node website](https://nodejs.org/en/download/)
   
 4. Test your Node installation: Make sure the commands `node -v` and `npm -v` can run.
-
-## Code Health
-Before we dive into the project, we want to talk about code health. Since your code for the semester will eventually be pushed into the actual Storr codebase, it needs to be maintainable and clean. Here are a few things to keep in mind:
-- Maintain a *consistent coding style*. Storr uses [this style guide](https://github.com/airbnb/javascript) (includes a part for React as well), so make sure to follow it as you code. We also recommend configuring your editor to indent with two spaces, to have a ruler for tracking line height, and to have linting for Typescript. 
-- Organize your code into directories based on function and use imports/exports to access code in different directories. We're not going to enforce a certain structure, but you could Google resources like [this React Native guide](https://medium.com/the-andela-way/how-to-structure-a-react-native-app-for-scale-a29194cd33fc) structuring guide to figure out how to structure your code.
-- Make your code modular and avoid repetition. Each function should be relatively short and serve one main purpose, and there should be minimal repeated code between any of your functions. 
 
 ## Server
 First, let's create an Apollo Express server using GraphQL.
@@ -43,6 +46,7 @@ First, let's create an Apollo Express server using GraphQL.
   - Make sure your GraphQL schema:
     - Has at least 2 queries and at least 2 mutations (along with their resolvers).
     - Has at least 1 query and at least 1 mutation with argument(s).
+    - Has at least 3 different field types (e.g. `String`, etc)
     - Uses types both with and without the `!` suffix&mdash;What does this mean? E.g.
     ```
     type Person {
@@ -64,7 +68,6 @@ First, let's create an Apollo Express server using GraphQL.
       car: Car
     }
     ```
-  - TODO: Add more criteria here
   
 ### Deliverables:
 - Run your server locally and navigate to the GraphQL endpoint
@@ -93,11 +96,29 @@ Now that we have our server running, let's build a simple React Native app that 
 5. Make sure that your code satisfies the following criteria:
 - Interact with all of the queries and mutations in your GraphQL server. Try to use as many React Native components as you can (`Text`, `TextInput`, `Button`, `FlatView`, etc).
 - Has at least two screens with navigation using `react-native-navigation`.
-- TODO: Add more criteria here
 
 ### Deliverables:
 - Show us your app on your phone or an emulator if you chose to go down the native route rather than Expo! Use the playground to show that your app is actually modifying data in the server.
 
 ## Finally
-1. Push your branch and make a pull request with a succinct description of your project. (TODO: should we comment on their PR's?) (TODO: potentially switch to Github classroom)
+1. Push your branch and make a pull request with a succinct description of your project.
 2. We will have you guys demo your projects at our next meeting! Have fun :)
+
+## Troubleshooting
+
+```
+$ graphql-codegen init
+internal/modules/cjs/loader.js:582
+    throw err;
+    ^
+
+Error: Cannot find module 'graphql'
+```
+Sometimes the command doesn't work on CLI. Try adding a new script command in `package.json` and run `npm run generate` instead.
+```
+{
+  "scripts": {
+    "generate": "graphql-codegen"
+  }
+}
+```
