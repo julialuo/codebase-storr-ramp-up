@@ -1,8 +1,11 @@
 # Ramp-up Project
 This is meant to be a fairly open-ended project to get you more familiar with the technologies used in our client project this semester with Storr. Reach out to us if you have any questions or concerns :)
 
+## Goal
+By the end of this project, you will create a Apollo Express server to interact with GraphQL and a React Native frontend!
+
 ## Setup
-1. Clone this repo and make a new branch with your name.
+1. Clone this repo and cd into it.
 
 2. Make two new directories under the root, `server` and `client`. We recommend splitting up the two because you will be installing different node modules and using different boilerplates.
 
@@ -37,6 +40,7 @@ First, let's create an Apollo Express server using GraphQL.
   - Make sure your GraphQL schema:
     - Has at least 2 queries and at least 2 mutations (along with their resolvers).
     - Has at least 1 query and at least 1 mutation with argument(s).
+    - Has at least 3 different field types (e.g. `String`, etc)
     - Uses types both with and without the `!` suffix&mdash;What does this mean? E.g.
     ```
     type Person {
@@ -58,7 +62,6 @@ First, let's create an Apollo Express server using GraphQL.
       car: Car
     }
     ```
-  - TODO: Add more criteria here
   
 ### Deliverables:
 - Run your server locally and navigate to the GraphQL endpoint
@@ -86,3 +89,22 @@ Now that we have our server running, let's build a simple React Native app that 
 5. Make sure that your code satisfies the following criteria:
 - Interact with all of the queries and mutations in your GraphQL server. Try to use as many React Native components as you can (`Text`, `TextInput`, `Button`, `FlatView`, etc).
 - Has at least two screens with navigation using `react-native-navigation`.
+
+## Troubleshooting
+
+```
+$ graphql-codegen init
+internal/modules/cjs/loader.js:582
+    throw err;
+    ^
+
+Error: Cannot find module 'graphql'
+```
+Sometimes the command doesn't work on CLI. Try adding a new script command in `package.json` and run `npm run generate` instead.
+```
+{
+  "scripts": {
+    "generate": "graphql-codegen"
+  }
+}
+```
