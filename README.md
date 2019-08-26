@@ -1,7 +1,7 @@
 # Ramp-up Project
 This is meant to be a fairly open-ended project to get you more familiar with the technologies used in our client project this semester with Storr. Reach out to us if you have any questions or concerns :)
 
-[WARNING] Some resources that we have you read are in JavaScript. Keep in mind that we will be writing code in Typescript, which is a typed version of JavaScript (we will have warning along the way, don't worry).
+[WARNING] Some resources are in JavaScript. Keep in mind that we will be writing code in Typescript, which is a typed version of JavaScript (we will have warning along the way, don't worry).
 
 ## Code Health
 Before we dive into the project, we want to talk about code health. Since your code for the semester will eventually be pushed into the actual Storr codebase, it needs to be maintainable and clean. Here are a few things to keep in mind:
