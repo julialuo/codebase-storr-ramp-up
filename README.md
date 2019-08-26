@@ -1,7 +1,7 @@
 # Ramp-up Project
 This is meant to be a fairly open-ended project to get you more familiar with the technologies used in our client project this semester with Storr. Reach out to us if you have any questions or concerns :)
 
-[WARNING] Some resources are in JavaScript. Keep in mind that we will be writing code in Typescript, which is a typed version of JavaScript (we will have warning along the way, don't worry).
+[WARNING] Some resources are in JavaScript. Keep in mind that we will be writing code in Typescript, which is a typed version of JavaScript (we will have warnings along the way, don't worry).
 
 ## Code Health
 Before we dive into the project, we want to talk about code health. Since your code for the semester will eventually be pushed into the actual Storr codebase, it needs to be maintainable and clean. Here are a few things to keep in mind:
@@ -109,6 +109,7 @@ Now that we have our server running, let's build a simple React Native app that 
 2. We will have you guys demo your projects at our next meeting! Have fun :)
 
 To reiterate on the criteria:
+
 **Server**
 - Use `async` for your resolvers even if they are synchronous
 - Use `graphql-codegen`
@@ -117,7 +118,8 @@ To reiterate on the criteria:
     - Has at least 1 query and at least 1 mutation with argument(s).
     - Has at least 3 different field types (e.g. `String`, etc)
     - Uses types both with and without the `!` suffix
-    - Has at least 1 nested type, e.g.
+    - Has at least 1 nested type
+
 **Client**
 - Interact with all of the queries and mutations in your GraphQL server. Try to use as many React Native components as you can (`Text`, `TextInput`, `Button`, `FlatView`, etc).
 - Has at least two screens with navigation using `react-native-navigation`.
@@ -132,7 +134,9 @@ internal/modules/cjs/loader.js:582
 
 Error: Cannot find module 'graphql'
 ```
+
 Sometimes the command doesn't work on CLI. Try adding a new script command in `package.json` and run `npm run generate` instead.
+
 ```
 {
   "scripts": {
