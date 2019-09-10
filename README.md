@@ -45,12 +45,12 @@ First, let's create an Apollo Express server using GraphQL.
 4. A great resource to auto-generate Typescript types based on a GraphQL schema is [graphql-codegen](https://graphql-code-generator.com/docs/getting-started/). Follow the steps `Installation` and then `Setup` to use it.
 
 5. Make sure that your code satisfies the following criteria:
-  - Use `async` for your resolvers even if they are synchronous
-  - Use `graphql-codegen`
+  - Use `async` for your resolvers even if they are synchronous.
+  - Use `graphql-codegen`.
   - Make sure your GraphQL schema:
     - Has at least 2 queries and at least 2 mutations (along with their resolvers).
     - Has at least 1 query and at least 1 mutation with argument(s).
-    - Has at least 3 different field types (e.g. `String`, etc)
+    - Has at least 3 different field types (e.g. `String`, etc).
     - Uses types both with and without the `!` suffix&mdash;What does this mean? E.g.
     ```
     type Person {
@@ -97,7 +97,7 @@ Now that we have our server running, let's build a simple React Native app that 
   - Sometime here you will also need to allow your app to transition between screens (it's in the criteria). Read through the steps in this [React Native guide](https://reactnavigation.org/docs/en/getting-started.html) to learn about how to do this navigation using `react-native-navigation` (warning: in Javascript). [This guide](https://dev.to/andreasbergqvist/react-navigation-with-typescript-29ka) can help you translate to Typescript.
   - If you need any types from your server, import them from your server rather than repeating them here.
 
-5. Make sure that your code satisfies the following criteria:
+4. Make sure that your code satisfies the following criteria:
 - Interact with all of the queries and mutations in your GraphQL server. Try to use as many React Native components as you can (`Text`, `TextInput`, `Button`, `FlatView`, etc).
 - Has at least two screens with navigation using `react-native-navigation`.
 
