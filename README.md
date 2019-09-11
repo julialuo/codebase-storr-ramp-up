@@ -15,9 +15,9 @@ Before we dive into the project, we want to talk about code health. Since your c
 By the end of this project, you will create a Apollo Express server to interact with GraphQL and a React Native frontend!
 
 ## Setup
-1. Clone this repo and create a new branch.
+1. Clone this repo.
 
-2. Make two new directories under the root, `server` and `client`. We recommend splitting up the two because you will be installing different node modules and using different boilerplates.
+2. Make two new directories under the root, `server` and `client`. We recommend splitting up the two because you will be installing different node modules and using different boilerplates. Push the two directories to the master branch.
 
 3. Install Node if you don't have it:
   - MacOS: `brew update` then `brew install node`
@@ -36,7 +36,7 @@ First, let's create an Apollo Express server using GraphQL.
 - [The Apollo docs](https://www.apollographql.com/docs/apollo-server/) explains what Apollo Server is. Feel free to read through to get a general idea of the Apollo Server, although we would not recommend following the code since it is all in Javascript (not Typescript). `Essentials/Understanding schema concepts` talks more about GraphQL schemas.
 
 ### Code:
-1. Make sure you are in the `server` directory.
+1. Make sure you are in the `server` directory. Make a new branch called `server` and complete the following steps on that branch.
 
 2. Follow [this Medium tutorial](https://medium.com/@th.guibert/basic-apollo-express-graphql-api-with-typescript-2ee021dea2c) to get a basic Hello World GraphQL Apollo server running.
 
@@ -74,9 +74,10 @@ First, let's create an Apollo Express server using GraphQL.
     ```
   
 ### Deliverables:
-- Run your server locally and navigate to the GraphQL endpoint
-  - If you followed the Medium tutorial above, this should be `http://localhost:3000/graphql`
-- Demonstrate some GraphQL queries using the GraphQL Playground interface
+- Run your server locally and navigate to the GraphQL endpoint.
+  - If you followed the Medium tutorial above, this should be `http://localhost:3000/graphql`.
+- Demonstrate some GraphQL queries using the GraphQL Playground interface.
+- Once you are finished, make a pull request for your branch with a brief description of your GraphQL schema.
 
 ## Client
 Now that we have our server running, let's build a simple React Native app that uses the Apollo Client to interact with our server.
@@ -87,7 +88,7 @@ Now that we have our server running, let's build a simple React Native app that 
 - [This page](https://facebook.github.io/react-native/blog/2018/05/07/using-typescript-with-react-native) in Facebook's blog is useful for learning the basics of React Native in *Typescript*, not Javascript.
 
 ### Code:
-1. Make sure you are in the `client` directory.
+1. Make sure you are in the `client` directory. Make a new branch called `client` and complete the following steps on that branch.
 
 2. Follow the `Getting Started` section of [Facebook's React Native tutorial](https://facebook.github.io/react-native/docs/getting-started). We recommend you use **Expo** for a fast setup. Follow the Expo instructions for how to test your Expo app on your iOS or Android phone. Make sure that after you run `expo init <Project-name>` that you select the *blank*, *typescript* configuration for your app.
 
@@ -103,6 +104,7 @@ Now that we have our server running, let's build a simple React Native app that 
 
 ### Deliverables:
 - Show us your app on your phone or an emulator if you chose to go down the native route rather than Expo! Use the playground to show that your app is actually modifying data in the server.
+- Once you are finished, make a pull request for your branch with a brief description of your app.
 
 ## Finally
 1. Push your branch and make a pull request with a succinct description of your project.
