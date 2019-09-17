@@ -32,7 +32,7 @@ First, let's create an Apollo Express server using GraphQL.
 ### Prerequisites:
 - [TutorialsPoint](https://www.tutorialspoint.com/typescript/index.htm) has a good introductory tutorial of Typescript. Feel free to use go through as much of this tutorial as you need and to use it as a reference.
 - Read *and* code through [this Medium article](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308) to understand how the async/await system works in Typescript. The Storr codebase has a lot of async/await so this will be useful later on.
-- [This site](https://www.howtographql.com/basics/0-introduction/) has a good introduction to GraphQL (recommended to read through `Introduction` to `Big Picture: Architecture` at least).
+- [This site](https://www.howtographql.com/basics/0-introduction/) has a good introduction to GraphQL (recommended to read through `Introduction` to `Core Concepts` at least).
 - [The Apollo docs](https://www.apollographql.com/docs/apollo-server/) explains what Apollo Server is. Feel free to read through to get a general idea of the Apollo Server, although we would not recommend following the code since it is all in Javascript (not Typescript). `Essentials/Understanding schema concepts` talks more about GraphQL schemas.
 
 ### Code:
